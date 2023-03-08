@@ -35,6 +35,8 @@ function displayTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
+// CECI EST UN TEST GIT
+
 // Edit task
 taskList.addEventListener('click', (event) => {
     if (event.target.classList.contains('edit-btn')) {
