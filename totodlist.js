@@ -4,7 +4,7 @@ const taskList = document.querySelector('#task-list');
 
 let tasks = [];
 
-// Add task
+// AJOUTER TACHES
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     const task = {
@@ -17,7 +17,7 @@ form.addEventListener('submit', (event) => {
     input.value = '';
 });
 
-// Display tasks
+// AFFICHER TACHES
 function displayTasks() {
     taskList.innerHTML = '';
     tasks.forEach((task) => {
@@ -37,7 +37,7 @@ function displayTasks() {
 
 // CECI EST UN TEST GIT
 
-// Edit task
+// Editer TACHES
 taskList.addEventListener('click', (event) => {
     if (event.target.classList.contains('edit-btn')) {
         const id = parseInt(event.target.getAttribute('data-id'));
@@ -50,7 +50,7 @@ taskList.addEventListener('click', (event) => {
     }
 });
 
-// Delete task
+// Effacer taches
 taskList.addEventListener('click', (event) => {
     if (event.target.classList.contains('delete-btn')) {
         const id = parseInt(event.target.getAttribute('data-id'));
@@ -59,7 +59,7 @@ taskList.addEventListener('click', (event) => {
     }
 });
 
-// Load tasks from local storage
+// charger taches
 const storedTasks = JSON.parse(localStorage.getItem('tasks'));
 if (storedTasks !== null) {
     tasks = storedTasks
